@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>🎨 Colorear Divertido</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- Pantalla de galería -->
+  <div id="gallery-screen" class="screen active">
+    <div class="header">
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Las imágenes se cargarán dinámicamente -->
+    </div>
+  </div>
+
+  <!-- Pantalla de dibujo -->
+  <div id="drawing-screen" class="screen">
+    <div class="drawing-header">
+      <button id="back-btn" class="header-btn">← Galería</button>
+    </div>
+    
+    <div class="canvas-container">
+      <canvas id="drawing-canvas"></canvas>
+      <img id="line-art" class="line-art" />
+      <div id="particles-container"></div>
+    </div>
+
+    <div class="toolbar">
+      <!-- Selector de color -->
+      <div class="tool-group">
+        <button id="color-btn" class="tool-btn color-preview"></button>
+        <div id="color-palette" class="color-palette hidden">
+          <div class="palette-grid"></div>
+        </div>
+      </div>
+
+      <!-- Selector de grosor -->
+      <div class="tool-group">
+        <button id="brush-thin" class="tool-btn brush-btn active" data-size="2">
+          <div class="brush-preview thin"></div>
+        </button>
+        <button id="brush-medium" class="tool-btn brush-btn" data-size="10">
+          <div class="brush-preview medium"></div>
+        </button>
+        <button id="brush-thick" class="tool-btn brush-btn" data-size="20">
+          <div class="brush-preview thick"></div>
+        </button>
+      </div>
+
+      <!-- Herramientas de acción -->
+      <div class="tool-group">
+        <button id="eraser-btn" class="tool-btn">🧽</button>
+        <button id="clear-btn" class="tool-btn">🗑️</button>
+        <button id="undo-btn" class="tool-btn">↶</button>
+        <button id="redo-btn" class="tool-btn">↷</button>
+        <button id="save-btn" class="tool-btn">💾</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio para efectos de sonido -->
+  <audio id="draw-sound" preload="auto">
+    <source src="attached_assets/Glitter Sound Effect for Music or Editing [IZWL2gALgvM] (mp3cut.net)_1752152759011.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
